@@ -1,10 +1,11 @@
 {
   "name": "@sone-dao/sone-react-placeholder",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "repository": "https://github.com/sone-dao/sone-react-placeholder.git",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "dev": "node ./dev.js"
   },
   "dependencies": {
     "react": "^18.2.0",
