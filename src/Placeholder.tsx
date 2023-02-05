@@ -5,16 +5,18 @@ export interface IPlaceholderProps {
   display: string
   color?: string
   height?: string
+  width?: string
 }
 
 const Placeholder: React.FC<IPlaceholderProps> = ({
   display,
   color = 'blue',
   height = 'auto',
+  width = '100%',
 }) => (
   <div
     className={styles.component}
-    style={{ borderColor: color, color, height }}
+    style={{ borderColor: color, color, height, width }}
   >
     <span>{display}</span>
   </div>
