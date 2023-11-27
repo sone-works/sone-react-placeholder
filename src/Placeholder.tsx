@@ -1,25 +1,33 @@
-import React from 'react'
-import styles from './Placeholder.module.scss'
-
-export interface IPlaceholderProps {
+type PlaceholderProps = {
   display: string
+  className?: string
   color?: string
   height?: string
   width?: string
 }
 
-const Placeholder: React.FC<IPlaceholderProps> = ({
+export default function Placeholder({
   display,
+  className,
   color = 'blue',
   height = 'auto',
   width = '100%',
-}) => (
-  <div
-    className={styles.component}
-    style={{ borderColor: color, color, height, width }}
-  >
-    <span>{display}</span>
-  </div>
-)
-
-export default Placeholder
+}: PlaceholderProps) {
+  return (
+    <div
+      className={className}
+      style={{
+        alignItems: 'center',
+        display: 'flex',
+        borderStyle: 'dashed',
+        borderColor: color,
+        fontSize: '1rem',
+        color,
+        height,
+        width,
+      }}
+    >
+      <span>{display}</span>
+    </div>
+  )
+}
