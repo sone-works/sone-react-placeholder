@@ -19,6 +19,7 @@ export default function Placeholder({
       style={{
         alignItems: 'center',
         display: 'flex',
+        justifyContent: 'center',
         border: '1px dashed',
         borderColor: color,
         fontSize: '1rem',
